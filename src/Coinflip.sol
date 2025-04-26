@@ -63,7 +63,8 @@ contract Coinflip is IEntropyConsumer {
     constructor(address entropy_) {
         owner = msg.sender;
         entropy = IEntropy(entropy_);
-        minGameBuyIn = 5 * 10**18;
+        // minGameBuyIn = 5 * 10**18;
+        minGameBuyIn = 0.5 * 10**18; // testing
     }
 
     function startGame() public payable incrementGameIndex {
